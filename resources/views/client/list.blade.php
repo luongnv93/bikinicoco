@@ -52,9 +52,9 @@
 
                         @foreach($productBestsellers as $p)
                         <div class="item">
-                            <a href="/product/{{$p->slug}}"><img src="/uploads/images/ecommerce/{{$p->feature_image}}"
+                            <a href="/san-pham/{{$p->slug}}"><img src="/uploads/images/ecommerce/{{$p->feature_image}}"
                                                           alt="{{$p->name}}"></a>
-                            <h3><a href="/product/{{$p->slug}}">{{$p->name}}</a></h3>
+                            <h3><a href="/san-pham/{{$p->slug}}">{{$p->name}}</a></h3>
                             <div class="price">${{$p->listed_price}}</div>
                         </div>
                         @endforeach
@@ -120,7 +120,7 @@
                                     <div>
                                         <a href="/uploads/images/ecommerce/{{$p->feature_image}}"
                                            class="btn btn-default fancybox-button">Zoom</a>
-                                        <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                                        {{--<a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>--}}
                                     </div>
                                 </div>
                                 <h3><a href="/san-pham/{{$p->slug}}">{{$p->name}}</a></h3>

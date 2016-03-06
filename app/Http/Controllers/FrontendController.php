@@ -68,7 +68,7 @@ class FrontendController extends Controller {
 
         $products = Product::where('category_id', $category->id)->orderBy('id', 'desc')->paginate(9);
 
-        $productBestsellers = Product::orderBy('listed_price', 'ASC')->limit(5)->get();
+        $productBestsellers = Product::orderBy('listed_price', 'ASC')->limit(6)->get();
 
 //        dd($products);
 

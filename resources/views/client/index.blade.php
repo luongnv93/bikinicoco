@@ -13,7 +13,7 @@ Mua sắm hàng đầu vịnh Bắc Bộ
         <!-- slide one start -->
         <div class="ls-slide ls-slide1" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 24,25,27,28;">
 
-            <img src="../../assets/frontend/pages/img/layerslider/slide1/bg.jpg" class="ls-bg" alt="Slide background">
+            <img src="/uploads/images/slidshow/s2.jpg" class="ls-bg" alt="Slide background">
 
             <div class="ls-l ls-title" style="top: 96px; left: 35%; white-space: nowrap;" data-ls="
             fade: true;
@@ -44,7 +44,7 @@ Mua sắm hàng đầu vịnh Bắc Bộ
         <!-- slide two start -->
         <div class="ls-slide ls-slide2" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 110,111,112,113;">
 
-            <img src="../../assets/frontend/pages/img/layerslider/slide2/bg.jpg" class="ls-bg" alt="Slide background">
+            <img src="/uploads/images/slidshow/s1.jpg" class="ls-bg" alt="Slide background">
 
             <div class="ls-l ls-title" style="top: 40%; left: 21%; white-space: nowrap;" data-ls="
           fade: true;
@@ -91,81 +91,6 @@ Mua sắm hàng đầu vịnh Bắc Bộ
         </div>
         <!-- slide two end -->
 
-        <!-- slide three start -->
-        <div class="ls-slide ls-slide3" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 92,93,105;">
-
-            <img src="../../assets/frontend/pages/img/layerslider/slide3/bg.jpg" class="ls-bg" alt="Slide background">
-
-            <div class="ls-l ls-title" style="top: 83px; left: 33%; white-space: nowrap;" data-ls="
-          fade: true;
-          fadeout: true;
-          durationin: 750;
-          durationout: 750;
-          easingin: easeOutQuint;
-          rotatein: 90;
-          rotateout: -90;
-          scalein: .5;
-          scaleout: .5;
-          showuntil: 4000;
-          ">Full Admin &amp; Frontend <strong>eCommerce UI</strong> Is Ready For Your Project
-            </div>
-            <div class="ls-l" style="top: 333px; left: 33%; white-space: nowrap; font-size: 20px; font: 20px 'Open Sans Light', sans-serif;" data-ls="
-          fade: true;
-          fadeout: true;
-          durationout: 750;
-          easingin: easeOutQuint;
-          delayin: 300;
-          scalein: .8;
-          scaleout: .8;
-          showuntil: 4000;
-          ">
-                <a href="#" class="ls-buy">
-                    Buy It Now!
-                </a>
-
-                <div class="ls-price">
-                    <span>All these for only:</span>
-                    <strong>25<sup>$</sup></strong>
-                </div>
-            </div>
-        </div>
-        <!-- slide three end -->
-
-        <!-- slide four start -->
-        <div class="ls-slide ls-slide4" data-ls="offsetxin: right; slidedelay: 7000; transition2d: 110,111,112,113;">
-
-            <img src="../../assets/frontend/pages/img/layerslider/slide5/bg.jpg" class="ls-bg" alt="Slide background">
-
-            <div class="ls-l ls-title" style="top: 35%; left: 60%; white-space: nowrap;" data-ls="
-          fade: true;
-          fadeout: true;
-          durationin: 750;
-          durationout: 750;
-          easingin: easeOutQuint;
-          rotatein: 90;
-          rotateout: -90;
-          scalein: .5;
-          scaleout: .5;
-          showuntil: 4000;">
-                The most<br>
-                wanted bijouterie
-            </div>
-
-            <div class="ls-l ls-mini-text" style="top: 70%; left: 60%; white-space: nowrap;" data-ls="
-          fade: true;
-          fadeout: true;
-          durationout: 750;
-          easingin: easeOutQuint;
-          delayin: 300;
-          scalein: .8;
-          scaleout: .8;
-          showuntil: 4000;">
-                <span>Lorem ipsum and</span>
-                <a href="#">Buy It Now!</a>
-            </div>
-
-        </div>
-        <!-- slide four end -->
     </div>
     <!-- LayerSlider end -->
 </div>
@@ -324,15 +249,15 @@ Mua sắm hàng đầu vịnh Bắc Bộ
                         <ol class="carousel-indicators">
                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                             <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            {{--<li data-target="#myCarousel" data-slide-to="2"></li>--}}
                         </ol>
                         <div class="carousel-inner">
                             <div class="item active">
                                 <img src="../../assets/frontend/pages/img/index-sliders/slide1.jpg" class="img-responsive" alt="Berry Lace Dress">
                             </div>
-                            <div class="item">
-                                <img src="../../assets/frontend/pages/img/index-sliders/slide2.jpg" class="img-responsive" alt="Berry Lace Dress">
-                            </div>
+                            {{--<div class="item">--}}
+                                {{--<img src="../../assets/frontend/pages/img/index-sliders/slide2.jpg" class="img-responsive" alt="Berry Lace Dress">--}}
+                            {{--</div>--}}
                             <div class="item">
                                 <img src="../../assets/frontend/pages/img/index-sliders/slide3.jpg" class="img-responsive" alt="Berry Lace Dress">
                             </div>
