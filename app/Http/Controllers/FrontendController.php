@@ -13,6 +13,7 @@ use App\Models\OrderItems;
 use App\Models\Post;
 use App\Models\PostComment;
 use App\Models\Product;
+use App\Models\ProductAttribute;
 use App\Models\ProductGalery;
 use App\Models\ProductRate;
 use App\Models\Script;
@@ -20,8 +21,9 @@ use App\Models\Slide;
 use App\Role;
 use App\UserInfos;
 use App\UserRole;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 use App\User;
+//use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Validator;
@@ -33,19 +35,47 @@ use Illuminate\Support\Facades\DB;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
+
+use Illuminate\Http\Request;
+
+//use Illuminate\Support\Facades\Request;
+//use Illuminate\Support\Facades\Redirect;
+//use Cart;
+
 class FrontendController extends Controller {
 
     public function index(){
-        $count = Cart::count();
+
         $categories  = Category::all();
-
         $products = Product::all();
-//        $scripts = Script::all();
-//        $slides = Slide::all();
-
         $productNew = Product::orderBy('created_at', 'DESC')->limit(6)->get();
         $productBestsellers = Product::orderBy('listed_price', 'ASC')->limit(5)->get();
         $productBestsellers2 = Product::orderBy('listed_price', 'DESC')->limit(5)->get();
+//        $scripts = Script::all();
+//        $slides = Slide::all();
+
+
+        // Cart
+        $total = Cart::total();
+        $count = Cart::count();
+        $content = Cart::content();
+
+        $order = new Order();
+
+        $order->deleted = 0;
+        $order->save();
+        $newOrder = Order::find($order->id);
+
+        foreach($content as $item){
+            $item_id = $item->id;
+            $item_quantity = $item->qty;
+            $orderItems = new OrderItems();
+            $orderItems->deleted = 0;
+            $orderItems->order_id = $order->id;
+            $orderItems->quantity = $item_quantity;
+            $orderItems->product_id = $item_id;
+            $orderItems->save();
+        }
 
         return view('client.index',[
             'categories'=>$categories,
@@ -56,6 +86,9 @@ class FrontendController extends Controller {
             'productBestsellers2' => $productBestsellers2,
 //            'scripts'=>$scripts,
 //            'slides'=>$slides
+            'cart_total'=>$total,
+            'cart_count'=>$count,
+            'cart_contents'=>$content,
         ]);
     }
 
@@ -70,7 +103,29 @@ class FrontendController extends Controller {
 
         $productBestsellers = Product::orderBy('listed_price', 'ASC')->limit(6)->get();
 
-//        dd($products);
+        // Cart
+        $total = Cart::total();
+        $count = Cart::count();
+        $content = Cart::content();
+
+        $order = new Order();
+
+        $order->deleted = 0;
+        $order->save();
+        $newOrder = Order::find($order->id);
+
+        if($content) {
+            foreach($content as $item){
+                $item_id = $item->id;
+                $item_quantity = $item->qty;
+                $orderItems = new OrderItems();
+                $orderItems->deleted = 0;
+                $orderItems->order_id = $order->id;
+                $orderItems->quantity = $item_quantity;
+                $orderItems->product_id = $item_id;
+                $orderItems->save();
+            }
+        }
 
         return view('client.list',
             [
@@ -78,6 +133,9 @@ class FrontendController extends Controller {
                 'category' => $category,
                 'products' => $products,
                 'productBestsellers' => $productBestsellers,
+                'cart_total'=>$total,
+                'cart_count'=>$count,
+                'cart_contents'=>$content,
             ]
         );
 
@@ -91,6 +149,31 @@ class FrontendController extends Controller {
         $product = Product::where('slug', $slug)->first();
 
         $productGallery = ProductGalery::where('product_id', $product->id);
+        $productAttribute = ProductAttribute::where('product_id', $product->id);
+
+        // Cart
+        $total = Cart::total();
+        $count = Cart::count();
+        $content = Cart::content();
+
+        $order = new Order();
+
+        $order->deleted = 0;
+        $order->save();
+        $newOrder = Order::find($order->id);
+
+        if($content) {
+            foreach($content as $item){
+                $item_id = $item->id;
+                $item_quantity = $item->qty;
+                $orderItems = new OrderItems();
+                $orderItems->deleted = 0;
+                $orderItems->order_id = $order->id;
+                $orderItems->quantity = $item_quantity;
+                $orderItems->product_id = $item_id;
+                $orderItems->save();
+            }
+        }
 
         return view('client.detail',
             [
@@ -98,27 +181,135 @@ class FrontendController extends Controller {
                 'product' => $product,
                 'productBestsellers' => $productBestsellers,
                 'productGallery' => $productGallery,
+                'cart_total'=>$total,
+                'cart_count'=>$count,
+                'cart_contents'=>$content,
             ]
         );
+    }
+
+    public function showCart() {
+
+        $categories = Category::all();
+
+        $productBestsellers = Product::orderBy('listed_price', 'ASC')->limit(5)->get();
+
+        $total = Cart::total();
+        $count = Cart::count();
+        $content = Cart::content();
+
+        $order = new Order();
+        $order->deleted = 0;
+        $order->save();
+        $newOrder = Order::find($order->id);
+
+        $orderItems = null;
+
+        if($content) {
+            foreach($content as $item){
+                $item_id = $item->id;
+                $item_quantity = $item->qty;
+                $orderItems = new OrderItems();
+                $orderItems->deleted = 0;
+                $orderItems->order_id = $order->id;
+                $orderItems->quantity = $item_quantity;
+                $orderItems->product_id = $item_id;
+                $orderItems->save();
+            }
+        }
+
+//        $data = array(
+//            'cart_total'=>$total,
+//            'cart_count'=>$count,
+//            'cart_contents'=>$content,
+//            'new_order'=>$newOrder,
+//            'order_details'=> $orderItems
+//        );
+
+        return view('client.cart',
+            [
+                'categories' => $categories,
+                'productBestsellers' => $productBestsellers,
+                'cart_total'=>$total,
+                'cart_count'=>$count,
+                'cart_contents'=>$content,
+//                'new_order'=>$newOrder,
+                'order_details'=> $orderItems
+            ]
+        );
+
+
+    }
+
+    public function checkout() {
+
+        $categories = Category::all();
+
+        $total = Cart::total();
+        $count = Cart::count();
+        $content = Cart::content();
+
+        $order = new Order();
+
+        $order->deleted = 0;
+        $order->save();
+        $newOrder = Order::find($order->id);
+
+        $orderItems = null;
+
+        if($content) {
+            foreach($content as $item){
+                $item_id = $item->id;
+                $item_quantity = $item->qty;
+                $orderItems = new OrderItems();
+                $orderItems->deleted = 0;
+                $orderItems->order_id = $order->id;
+                $orderItems->quantity = $item_quantity;
+                $orderItems->product_id = $item_id;
+                $orderItems->save();
+            }
+        }
+
+//        $data = array(
+//            'cart_total'=>$total,
+//            'cart_count'=>$count,
+//            'cart_contents'=>$content,
+//            'new_order'=>$newOrder,
+//            'order_details'=> $orderItems
+//        );
+
+        return view('client.checkout',
+            [
+                'categories' => $categories,
+                'cart_total'=>$total,
+                'cart_count'=>$count,
+                'cart_contents'=>$content,
+                'new_order'=>$newOrder,
+                'order_details'=> $orderItems
+            ]
+        );
+
+
     }
 
 
 
 
+
     //*************************CART********************
-//    public function postAddToCart(){
-//        return CartDao::postAddToCart();
-//    }
-//
-//    public function getDeleteRow($rowId){
-//        return CartDao::getDeleteRow($rowId);
-//    }
-//    public function postUpdateCart(){
-//        return CartDao::postUpdateCart();
-//    }
-//    public function postAddToCartCategory(){
-//        return CartDao::postAddToCartCategory();
-//    }
+    public function postAddToCart(){
+        return CartDao::postAddToCart();
+    }
+
+    public function getDeleteRow($rowId){
+        return CartDao::getDeleteRow($rowId);
+    }
+    public function postUpdateCart(){
+        return CartDao::postUpdateCart();
+    }
+    public function postAddToCartCategory(){
+        return CartDao::postAddToCartCategory();
+    }
 //    //***************************  RATING AND COMMENT*****************
 //    public function postAddRateProduct(){
 //        $rate = new ProductRate;
@@ -144,22 +335,23 @@ class FrontendController extends Controller {
 //    ]);
 //
 //}
-//    public function paymenSuccess($orderid,$email,$first_name,$last_name,$phone){
-//    $order = Order::find($orderid);
-//    $order->first_name = $first_name;
-//    $order->last_name = $last_name;
-//    $order->email = $email;
-//    $order->phone = $phone;
-////    $order->address = Input::get('address');
-////    $order->note = Input::get('note');
-////    $order->order_method = Input::get('order_method');
-////    $order->total = Cart::total();
-////    $order->city = Input::get('city');
-//    $order->deleted = 1;
-//    $order->save();
-//
-//    return redirect('/');
-//}
+    public function paymenSuccess($orderid,$email,$first_name,$last_name,$phone, $address){
+    $order = Order::find($orderid);
+    $order->first_name = $first_name;
+    $order->last_name = $last_name;
+    $order->email = $email;
+    $order->phone = $phone;
+    $order->address = $address;
+//    $order->address = Input::get('address');
+//    $order->note = Input::get('note');
+//    $order->order_method = Input::get('order_method');
+//    $order->total = Cart::total();
+//    $order->city = Input::get('city');
+    $order->deleted = 1;
+    $order->save();
+
+    return redirect('/');
+}
 //    //***********************ORDER*********************
 //    public function postSaveOrder(){
 //        $order = new Order;

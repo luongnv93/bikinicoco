@@ -10,7 +10,7 @@
     <div class="main">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="{{url('/')}}">Home</a></li>
+                <li><i class="fa fa-home"></i> <a href="{{url('/')}}"> Trang chủ</a></li>
                 <li class="active">{{$category->name}}</li>
             </ul>
             <!-- BEGIN SIDEBAR & CONTENT -->
@@ -48,23 +48,15 @@
 
                     {{--TODO | sidebar-products--}}
                     <div class="sidebar-products clearfix">
-                        <h2>Bestsellers</h2>
+                        <h2>Sản phẩm bán chạy</h2>
 
                         @foreach($productBestsellers as $p)
                         <div class="item">
-                            <a href="/san-pham/{{$p->slug}}"><img src="/uploads/images/ecommerce/{{$p->feature_image}}"
-                                                          alt="{{$p->name}}"></a>
+                            <a href="/san-pham/{{$p->slug}}"><img src="/uploads/images/ecommerce/{{$p->feature_image}}" alt="{{$p->name}}"></a>
                             <h3><a href="/san-pham/{{$p->slug}}">{{$p->name}}</a></h3>
-                            <div class="price">${{$p->listed_price}}</div>
+                            <div class="price">{{number_format($p->listed_price, 0, '.', ',')}} VND</div>
                         </div>
                         @endforeach
-
-                        {{--<div class="item">--}}
-                            {{--<a href="shop-item.html"><img src="../../assets/frontend/pages/img/products/k4.jpg"--}}
-                                                          {{--alt="Some Shoes in Animal with Cut Out"></a>--}}
-                            {{--<h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>--}}
-                            {{--<div class="price">$23.00</div>--}}
-                        {{--</div>--}}
                     </div>
                 </div>
                 <!-- END SIDEBAR -->
@@ -72,7 +64,7 @@
                 <!-- BEGIN CONTENT -->
                 <div class="col-md-9 col-sm-7">
 
-                    {{--TODO filter--}}
+                    {{-- TODO filter--}}
                     {{--<div class="row list-view-sorting clearfix">--}}
                         {{--<div class="col-md-2 col-sm-2 list-view">--}}
                             {{--<a href="javascript:;"><i class="fa fa-th-large"></i></a>--}}
@@ -120,12 +112,17 @@
                                     <div>
                                         <a href="/uploads/images/ecommerce/{{$p->feature_image}}"
                                            class="btn btn-default fancybox-button">Zoom</a>
-                                        {{--<a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>--}}
                                     </div>
                                 </div>
                                 <h3><a href="/san-pham/{{$p->slug}}">{{$p->name}}</a></h3>
-                                <div class="pi-price">{{$p->listed_price}}</div>
-                                <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                                <div class="pi-price">{{number_format($p->listed_price, 0, '.', ',')}} VND</div>
+                                <form method="POST" action="/add-to-cart-category">
+                                    <input type="hidden" name="product_id" value="{{$p->id}}">
+                                    <input type="hidden" name="quantity" value="1" class="form-control">
+                                    <button type="submit" class="btn btn-default add2cart">
+                                        <i class="fa fa-shopping-cart"></i> Thêm
+                                    </button>
+                                </form>
                             </div>
                         </div>
                         <!-- PRODUCT ITEM END -->

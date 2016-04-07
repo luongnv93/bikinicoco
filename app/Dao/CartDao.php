@@ -18,8 +18,11 @@ class CartDao {
             'id' => $product->id,
             'name' => $product->name,
             'qty' => $quantity,
-            'price'=>$product->listed_price,
-            'options' => array('feature_image' => $product->feature_image),
+            'price'=> $product->listed_price,
+            'options' => array(
+                'feature_image' => $product->feature_image,
+                'slug' => $product->slug,
+                ),
             ));
         return response()->json(['msg'=>'Sản phẩm đã được thêm vào giỏ hàng',
                                  'success'=>1,
@@ -28,15 +31,17 @@ class CartDao {
     }
     public static function getDeleteRow($rowId){
         Cart::remove($rowId);
-        return response()->json(['msg'=>'Sản phẩm đã được xóa khỏi giỏ hàng',
-            'success'=>1
-        ]);
+
+        return redirect('/gio-hang');
+//        return response()->json(['msg'=>'Sản phẩm đã được xóa khỏi giỏ hàng',
+//            'success'=>1
+//        ]);
     }
     public static function postUpdateCart(){
         $rowId = Input::get('rowId');
         $quantity = Input::get('quantity');
         Cart::update($rowId, array('qty' => $quantity));
-        return redirect('/#/gio-hang');
+        return redirect('/gio-hang');
     }
     public static function postAddToCartCategory(){
         $quantity = Input::get('quantity');
@@ -47,8 +52,11 @@ class CartDao {
             'name' => $product->name,
             'qty' => $quantity,
             'price'=>$product->listed_price,
-            'options' => array('feature_image' => $product->feature_image),
+            'options' => array(
+                'feature_image' => $product->feature_image,
+                'slug' => $product->slug,
+            ),
         ));
-        return redirect('/#/gio-hang');
+        return redirect('/gio-hang');
     }
 } 

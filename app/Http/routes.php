@@ -14,7 +14,13 @@ use App\Dao\ProductDao;
 Route::get('/','FrontendController@index');
 Route::get('danh-muc/{slug}','FrontendController@getListProduct');
 Route::get('san-pham/{slug}','FrontendController@getProductDetail');
+Route::get('gio-hang','FrontendController@showCart');
+Route::get('thanh-toan','FrontendController@checkout');
 
+
+
+
+Route::post('/cart', 'FrontendController@cart');
 
 Route::get('tin-tuc','FrontendController@getBlog');
 Route::get('blog-nha-dep','FrontendController@getBlogBeautifulHouse');
@@ -152,7 +158,7 @@ Route::post('create-contact','FrontendController@postCreateContact');
 Route::post('add-rate','FrontendController@postAddRateProduct');
 Route::post('add-post-comment','FrontendController@postAddCommentPost');
 Route::get('test/open-file','FrontendController@Test');
-Route::get('payment/success/{orderid}/{email}/{first_name}/{last_name}/{phone}','FrontendController@paymenSuccess');
+Route::get('payment/success/{orderid}/{email}/{first_name}/{last_name}/{phone}/{address}','FrontendController@paymenSuccess');
 
 //Api
 Route::group(array('prefix'=>'admin/api/backend'),function(){

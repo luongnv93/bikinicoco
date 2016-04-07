@@ -1,11 +1,12 @@
 @extends('layouts.client')
 
 @section('page-title')
-Mua sắm hàng đầu vịnh Bắc Bộ
+Bikini hàng đầu vịnh bắc bộ
 @stop
 
 @section('content')
-        <!-- BEGIN SLIDER -->
+<!-- BEGIN SLIDER -->
+{{--TODO Slide--}}
 <div class="page-slider margin-bottom-35">
     <!-- LayerSlider start -->
     <div id="layerslider" style="width: 100%; height: 494px; margin: 0 auto;">
@@ -15,28 +16,12 @@ Mua sắm hàng đầu vịnh Bắc Bộ
 
             <img src="/uploads/images/slidshow/s2.jpg" class="ls-bg" alt="Slide background">
 
-            <div class="ls-l ls-title" style="top: 96px; left: 35%; white-space: nowrap;" data-ls="
-            fade: true;
-            fadeout: true;
-            durationin: 750;
-            durationout: 750;
-            easingin: easeOutQuint;
-            rotatein: 90;
-            rotateout: -90;
-            scalein: .5;
-            scaleout: .5;
-            showuntil: 4000;
-          ">Tones of <strong>shop UI features</strong> designed
+            <div class="ls-l ls-title" style="top: 96px; left: 35%; white-space: nowrap;" data-ls=" fade: true; fadeout: true; durationin: 750; durationout: 750; easingin: easeOutQuint; rotatein: 90; rotateout: -90; scalein: .5; scaleout: .5; showuntil: 4000; ">
+                Tones of <strong>shop UI features</strong> designed
             </div>
 
-            <div class="ls-l ls-mini-text" style="top: 338px; left: 35%; white-space: nowrap;" data-ls="
-          fade: true;
-          fadeout: true;
-          durationout: 750;
-          easingin: easeOutQuint;
-          delayin: 300;
-          showuntil: 4000;
-          ">Lorem ipsum dolor sit amet constectetuer diam<br> adipiscing elit euismod ut laoreet dolore.
+            <div class="ls-l ls-mini-text" style="top: 338px; left: 35%; white-space: nowrap;" data-ls=" fade: true; fadeout: true; durationout: 750; easingin: easeOutQuint; delayin: 300; showuntil: 4000; ">
+                Lorem ipsum dolor sit amet constectetuer diam<br> adipiscing elit euismod ut laoreet dolore.
             </div>
         </div>
         <!-- slide one end -->
@@ -46,47 +31,16 @@ Mua sắm hàng đầu vịnh Bắc Bộ
 
             <img src="/uploads/images/slidshow/s1.jpg" class="ls-bg" alt="Slide background">
 
-            <div class="ls-l ls-title" style="top: 40%; left: 21%; white-space: nowrap;" data-ls="
-          fade: true;
-          fadeout: true;
-          durationin: 750; durationout: 109750;
-          easingin: easeOutQuint;
-          easingout: easeInOutQuint;
-          delayin: 0;
-          delayout: 0;
-          rotatein: 90;
-          rotateout: -90;
-          scalein: .5;
-          scaleout: .5;
-          showuntil: 4000;
-          "><strong>Unlimted</strong> Layout Options <em>Fully Responsive</em>
+            <div class="ls-l ls-title" style="top: 40%; left: 21%; white-space: nowrap;" data-ls=" fade: true; fadeout: true; durationin: 750; durationout: 109750; easingin: easeOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0; rotatein: 90; rotateout: -90; scalein: .5; scaleout: .5; showuntil: 4000; ">
+                <strong>Unlimted</strong> Layout Options <em>Fully Responsive</em>
             </div>
 
-            <div class="ls-l ls-price" style="top: 50%; left: 45%; white-space: nowrap;" data-ls="
-          fade: true;
-          fadeout: true;
-          durationout: 109750;
-          easingin: easeOutQuint;
-          delayin: 300;
-          scalein: .8;
-          scaleout: .8;
-          showuntil: 4000;"><b>from</b> <strong><span>$</span>25</strong>
+            <div class="ls-l ls-price" style="top: 50%; left: 45%; white-space: nowrap;" data-ls=" fade: true; fadeout: true; durationout: 109750; easingin: easeOutQuint; delayin: 300; scalein: .8; scaleout: .8; showuntil: 4000;">
+                <b>from</b> <strong><span>$</span>25</strong>
             </div>
 
-            <a href="#" class="ls-l ls-more" style="top: 72%; left: 21%; display: inline-block; white-space: nowrap;" data-ls="
-          fade: true;
-          fadeout: true;
-          durationin: 750;
-          durationout: 750;
-          easingin: easeOutQuint;
-          easingout: easeInOutQuint;
-          delayin: 0;
-          delayout: 0;
-          rotatein: 90;
-          rotateout: -90;
-          scalein: .5;
-          scaleout: .5;
-          showuntil: 4000;">See More Details
+            <a href="#" class="ls-l ls-more" style="top: 72%; left: 21%; display: inline-block; white-space: nowrap;" data-ls=" fade: true; fadeout: true; durationin: 750; durationout: 750; easingin: easeOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0; rotatein: 90; rotateout: -90; scalein: .5; scaleout: .5; showuntil: 4000;">
+                See More Details
             </a>
         </div>
         <!-- slide two end -->
@@ -98,11 +52,12 @@ Mua sắm hàng đầu vịnh Bắc Bộ
 
 <div class="main">
     <div class="container">
+
         <!-- BEGIN SALE PRODUCT & NEW ARRIVALS -->
         <div class="row margin-bottom-40">
             <!-- BEGIN SALE PRODUCT -->
             <div class="col-md-12 sale-product">
-                <h2>New Bikini</h2>
+                <h2>Sản phẩm mơi</h2>
                 <div class="owl-carousel owl-carousel5">
 
                     @foreach($productNew as $p)
@@ -113,30 +68,42 @@ Mua sắm hàng đầu vịnh Bắc Bộ
                                 <div>
                                     <a href="/uploads/images/ecommerce/{{$p->feature_image}}" class="btn btn-default fancybox-button">Zoom</a>
                                     {{--<a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>--}}
+                                    {{--<form method="post" action="https://www.nganluong.vn/advance_payment.php">--}}
+                                        {{--<input type=hidden name=receiver value="luongnv93@gmail.com"/>--}}
+                                        {{--<input type=hidden name=product value="{{$p->id}}"/>--}}
+                                        {{--<input type=hidden name=price value="{{$p->listed_price}}"/>--}}
+                                        {{--<input type=hidden name=return_url value="http://complete.com/thank.php"/>--}}
+                                        {{--<input type=hidden name=comments value=""/>--}}
+                                        {{--<input type=image--}}
+                                               {{--src="https://www.nganluong.vn/data/images/merchant/button/btn-buynow-121.png"/>--}}
+                                    {{--</form>--}}
                                 </div>
                             </div>
                             <h3><a href="/san-pham/{{$p->slug}}">{{$p->name}}</a></h3>
-                            <div class="pi-price">${{$p->listed_price}}</div>
-                            <a href="#" class="btn btn-default add2cart">Add to cart</a>
+                            <div class="pi-price">{{number_format($p->listed_price, 0, '.', ',')}} VND</div>
+
+                            {{--<form method="post" action="https://www.nganluong.vn/advance_payment.php">--}}
+                                {{--<input type=hidden name=receiver value="luongnv93@gmail.com" />--}}
+                                {{--<input type=hidden name=product value="{{$p->id}}" />--}}
+                                {{--<input type=hidden name=price value="{{$p->listed_price}}" />--}}
+                                {{--<input type=hidden name=return_url value="http://complete.com/thank.php" />--}}
+                                {{--<input type=hidden name=comments value="" />--}}
+                                {{--<input type=image src="https://www.nganluong.vn/data/images/merchant/button/btn-buynow-121.png" />--}}
+                            {{--</form>--}}
+
+                            <form method="POST" action="/add-to-cart-category">
+                                <input type="hidden" name="product_id" value="{{$p->id}}">
+                                <input type="hidden" name="quantity" value="1" class="form-control">
+                                <button type="submit" class="btn btn-default add2cart">
+                                    <i class="fa fa-shopping-cart"></i> Thêm
+                                </button>
+                            </form>
+                            {{--<a href="#" class="btn btn-default add2cart">Add to cart</a>--}}
                             <div class="sticker sticker-new"></div>
                         </div>
                     </div>
                     @endforeach
 
-                    {{--<div>--}}
-                        {{--<div class="product-item">--}}
-                            {{--<div class="pi-img-wrapper">--}}
-                                {{--<img src="../../assets/frontend/pages/img/products/model2.jpg" class="img-responsive" alt="Berry Lace Dress">--}}
-                                {{--<div>--}}
-                                    {{--<a href="../../assets/frontend/pages/img/products/model2.jpg" class="btn btn-default fancybox-button">Zoom</a>--}}
-                                    {{--<a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                            {{--<h3><a href="shop-item.html">Berry Lace Dress2</a></h3>--}}
-                            {{--<div class="pi-price">$29.00</div>--}}
-                            {{--<a href="#" class="btn btn-default add2cart">Add to cart</a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
                 </div>
             </div>
             <!-- END SALE PRODUCT -->
@@ -145,6 +112,7 @@ Mua sắm hàng đầu vịnh Bắc Bộ
 
         <!-- BEGIN SIDEBAR & CONTENT -->
         <div class="row margin-bottom-40 ">
+
             <!-- BEGIN SIDEBAR -->
             <div class="sidebar col-md-3 col-sm-4">
                 <ul class="list-group margin-bottom-25 sidebar-menu">
@@ -156,9 +124,10 @@ Mua sắm hàng đầu vịnh Bắc Bộ
                 </ul>
             </div>
             <!-- END SIDEBAR -->
+
             <!-- BEGIN CONTENT -->
             <div class="col-md-9 col-sm-8">
-                <h2>Bestsellers</h2>
+                <h2>Sản phẩm bán chạy</h2>
                 <div class="owl-carousel owl-carousel3">
 
                     @foreach($productBestsellers as $p)
@@ -172,27 +141,19 @@ Mua sắm hàng đầu vịnh Bắc Bộ
                                     </div>
                                 </div>
                                 <h3><a href="/san-pham/{{$p->slug}}">{{$p->name}}</a></h3>
-                                <div class="pi-price">${{$p->listed_price}}</div>
-                                <a href="#" class="btn btn-default add2cart">Add to cart</a>
+                                <div class="pi-price">{{number_format($p->listed_price, 0, '.', ',')}} VND</div>
+                                <form method="POST" action="/add-to-cart-category">
+                                    <input type="hidden" name="product_id" value="{{$p->id}}">
+                                    <input type="hidden" name="quantity" value="1" class="form-control">
+                                    <button type="submit" class="btn btn-default add2cart">
+                                        <i class="fa fa-shopping-cart"></i> Thêm
+                                    </button>
+                                </form>
                                 {{--<div class="sticker sticker-new"></div>--}}
                             </div>
                         </div>
                     @endforeach
 
-                    {{--<div>--}}
-                        {{--<div class="product-item">--}}
-                            {{--<div class="pi-img-wrapper">--}}
-                                {{--<img src="../../assets/frontend/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">--}}
-                                {{--<div>--}}
-                                    {{--<a href="../../assets/frontend/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>--}}
-                                    {{--<a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                            {{--<h3><a href="shop-item.html">Berry Lace Dress6</a></h3>--}}
-                            {{--<div class="pi-price">$29.00</div>--}}
-                            {{--<a href="#" class="btn btn-default add2cart">Add to cart</a>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
                 </div>
             </div>
             <!-- END CONTENT -->
@@ -201,9 +162,10 @@ Mua sắm hàng đầu vịnh Bắc Bộ
 
         <!-- BEGIN TWO PRODUCTS & PROMO -->
         <div class="row margin-bottom-35 ">
+
             <!-- BEGIN TWO PRODUCTS -->
             <div class="col-md-6 two-items-bottom-items">
-                <h2>Sale</h2>
+                <h2>Sản phẩm giảm giá</h2>
                 <div class="owl-carousel owl-carousel2">
 
                     @foreach($productBestsellers2 as $p)
@@ -217,30 +179,23 @@ Mua sắm hàng đầu vịnh Bắc Bộ
                                     </div>
                                 </div>
                                 <h3><a href="/san-pham/{{$p->slug}}">{{$p->name}}</a></h3>
-                                <div class="pi-price">${{$p->listed_price}}</div>
-                                <a href="#" class="btn btn-default add2cart">Add to cart</a>
+                                <div class="pi-price">{{number_format($p->listed_price, 0, '.', ',')}} VND</div>
+                                <form method="POST" action="/add-to-cart-category">
+                                    <input type="hidden" name="product_id" value="{{$p->id}}">
+                                    <input type="hidden" name="quantity" value="1" class="form-control">
+                                    <button type="submit" class="btn btn-default add2cart">
+                                        <i class="fa fa-shopping-cart"></i> Thêm
+                                    </button>
+                                </form>
                                 <div class="sticker sticker-sale"></div>
                             </div>
                         </div>
                     @endforeach
 
-                    <div>
-                        <div class="product-item">
-                            <div class="pi-img-wrapper">
-                                <img src="../../assets/frontend/pages/img/products/k4.jpg" class="img-responsive" alt="Berry Lace Dress">
-                                <div>
-                                    <a href="../../assets/frontend/pages/img/products/k4.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
-                                </div>
-                            </div>
-                            <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
-                            <div class="pi-price">$29.00</div>
-                            <a href="#" class="btn btn-default add2cart">Add to cart</a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- END TWO PRODUCTS -->
+
             <!-- BEGIN PROMO -->
             <div class="col-md-6 shop-index-carousel">
                 <div class="content-slider">

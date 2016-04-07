@@ -2,27 +2,27 @@
 <div class="steps-block steps-block-red">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 steps-block-col">
+            <div class="col-md-6 steps-block-col">
                 <i class="fa fa-truck"></i>
                 <div>
-                    <h2>Free ship</h2>
-                    <em>Express delivery withing 3 days</em>
+                    <h2>Miễn phí giao hàng</h2>
+                    <em>Hoàn trả trong 3 ngày</em>
                 </div>
                 <span>&nbsp;</span>
             </div>
-            <div class="col-md-4 steps-block-col">
-                <i class="fa fa-gift"></i>
-                <div>
-                    <h2>Daily Gifts</h2>
-                    <em>3 Gifts daily for lucky customers</em>
-                </div>
-                <span>&nbsp;</span>
-            </div>
-            <div class="col-md-4 steps-block-col">
+            {{--<div class="col-md-4 steps-block-col">--}}
+                {{--<i class="fa fa-gift"></i>--}}
+                {{--<div>--}}
+                    {{--<h2>Daily Gifts</h2>--}}
+                    {{--<em>3 Gifts daily for lucky customers</em>--}}
+                {{--</div>--}}
+                {{--<span>&nbsp;</span>--}}
+            {{--</div>--}}
+            <div class="col-md-6 steps-block-col">
                 <i class="fa fa-phone"></i>
                 <div>
                     <h2>0978888888</h2>
-                    <em>24/7 customer care available</em>
+                    <em>Hỗ trợ 24/7</em>
                 </div>
             </div>
         </div>
@@ -33,18 +33,18 @@
 <!-- BEGIN PRE-FOOTER -->
 <div class="pre-footer">
     <div class="container">
-        <div class="row">
-            <!-- BEGIN BOTTOM ABOUT BLOCK -->
-            <div class="col-md-3 col-sm-6 pre-footer-col">
-                <h2>About us</h2>
-                <p>Bikini coco is the best.</p>
+        {{--<div class="row">--}}
+            {{--<!-- BEGIN BOTTOM ABOUT BLOCK -->--}}
+            {{--<div class="col-md-3 col-sm-6 pre-footer-col">--}}
+                {{--<h2>About us</h2>--}}
                 {{--<p>Bikini coco is the best.</p>--}}
-            </div>
-            <!-- END BOTTOM ABOUT BLOCK -->
-            <!-- BEGIN BOTTOM INFO BLOCK -->
-            <div class="col-md-3 col-sm-6 pre-footer-col">
-                <h2>Information</h2>
-                <ul class="list-unstyled">
+                {{--<p>Bikini coco is the best.</p>--}}
+            {{--</div>--}}
+            {{--<!-- END BOTTOM ABOUT BLOCK -->--}}
+            {{--<!-- BEGIN BOTTOM INFO BLOCK -->--}}
+            {{--<div class="col-md-3 col-sm-6 pre-footer-col">--}}
+                {{--<h2>Information</h2>--}}
+                {{--<ul class="list-unstyled">--}}
                     {{--<li><i class="fa fa-angle-right"></i> <a href="#">Delivery Information</a></li>--}}
                     {{--<li><i class="fa fa-angle-right"></i> <a href="#">Customer Service</a></li>--}}
                     {{--<li><i class="fa fa-angle-right"></i> <a href="#">Order Tracking</a></li>--}}
@@ -52,32 +52,32 @@
                     {{--<li><i class="fa fa-angle-right"></i> <a href="contacts.html">Contact Us</a></li>--}}
                     {{--<li><i class="fa fa-angle-right"></i> <a href="#">Careers</a></li>--}}
                     {{--<li><i class="fa fa-angle-right"></i> <a href="#">Payment Methods</a></li>--}}
-                </ul>
-            </div>
-            <!-- END INFO BLOCK -->
+                {{--</ul>--}}
+            {{--</div>--}}
+            {{--<!-- END INFO BLOCK -->--}}
 
-            <!-- BEGIN TWITTER BLOCK -->
-            <div class="col-md-3 col-sm-6 pre-footer-col">
-                <h2 class="margin-bottom-0">Latest news</h2>
+            {{--<!-- BEGIN TWITTER BLOCK -->--}}
+            {{--<div class="col-md-3 col-sm-6 pre-footer-col">--}}
+                {{--<h2 class="margin-bottom-0">Latest news</h2>--}}
                 {{--<a class="twitter-timeline" href="https://twitter.com" data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB" data-widget-id="455411516829736961" data-chrome="noheader nofooter noscrollbar noborders transparent">Loading tweets by @keenthemes...</a>--}}
-            </div>
-            <!-- END TWITTER BLOCK -->
+            {{--</div>--}}
+            {{--<!-- END TWITTER BLOCK -->--}}
 
-            <!-- BEGIN BOTTOM CONTACTS -->
-            <div class="col-md-3 col-sm-6 pre-footer-col">
-                <h2>Our Contacts</h2>
-                <address class="margin-bottom-40">
-                    Hanoi, Vietname<br>
+            {{--<!-- BEGIN BOTTOM CONTACTS -->--}}
+            {{--<div class="col-md-3 col-sm-6 pre-footer-col">--}}
+                {{--<h2>Our Contacts</h2>--}}
+                {{--<address class="margin-bottom-40">--}}
+                    {{--Hanoi, Vietname<br>--}}
                     {{--Vietnam<br>--}}
                     {{--Phone: 300 323 3456<br>--}}
                     {{--Fax: 300 323 1456<br>--}}
                     {{--Email: <a href="mailto:info@metronic.com">info@metronic.com</a><br>--}}
                     {{--Skype: <a href="skype:metronic">metronic</a>--}}
-                </address>
-            </div>
-            <!-- END BOTTOM CONTACTS -->
-        </div>
-        <hr>
+                {{--</address>--}}
+            {{--</div>--}}
+            {{--<!-- END BOTTOM CONTACTS -->--}}
+        {{--</div>--}}
+        {{--<hr>--}}
         <div class="row">
             <!-- BEGIN SOCIAL ICONS -->
             <div class="col-md-6 col-sm-6">
