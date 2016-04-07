@@ -364,22 +364,6 @@ class BackendController extends Controller
         return RateManage::getDeleteRate($id);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //************************ API **************************
     public function getApiTagsByLang(){
         $lang = PostLang::with('tags')->get();

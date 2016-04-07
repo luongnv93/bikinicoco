@@ -72,14 +72,6 @@
 
                             <div class="shopping-total">
                                 <ul>
-                                    {{--<li>--}}
-                                        {{--<em>Sub total</em>--}}
-                                        {{--<strong class="price"><span>$</span>47.00</strong>--}}
-                                    {{--</li>--}}
-                                    {{--<li>--}}
-                                        {{--<em>Shipping cost</em>--}}
-                                        {{--<strong class="price"><span>$</span>3.00</strong>--}}
-                                    {{--</li>--}}
                                     <li class="shopping-total-price">
                                         <em>Tổng đơn hàng</em>
                                         <strong class="price">{{number_format($cart_total, 0, '.', ',')}} VND</strong>

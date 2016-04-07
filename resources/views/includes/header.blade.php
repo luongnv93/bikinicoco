@@ -1,7 +1,6 @@
 <!-- BEGIN HEADER -->
 <div class="header">
     <div class="container">
-        {{--<a class="site-logo" href="shop-index.html"><img src="../../assets/frontend/layout/img/logos/logo-shop-red.png" alt="Metronic Shop UI"></a>--}}
         <a class="site-logo" href="{{url('/')}}" style="display: block; width: 150px">
             <img src="/venas/img/logo2.png" alt="BIKINI HÀNG ĐẦU VỊNH BẮC BỘ" style="width:100%; height: auto">
         </a>
@@ -26,17 +25,9 @@
                             <span class="cart-content-count">x {{$cart->qty}}</span>
                             <strong>{{$cart->name}}</strong>
                             <em>{{number_format($cart->price, 0, '.', ',')}} VND</em>
-                            {{--<a href="javascript:void(0);" class="del-goods">&nbsp;</a>--}}
                         </li>
                         @endforeach
                         @endif
-                        {{--<li>--}}
-                            {{--<a href="shop-item.html"><img src="../../assets/frontend/pages/img/cart-img.jpg" alt="Rolex Classic Watch" width="37" height="34"></a>--}}
-                            {{--<span class="cart-content-count">x 1</span>--}}
-                            {{--<strong><a href="shop-item.html">Rolex Classic Watch</a></strong>--}}
-                            {{--<em>$1230</em>--}}
-                            {{--<a href="javascript:void(0);" class="del-goods">&nbsp;</a>--}}
-                        {{--</li>--}}
                     </ul>
                     <div class="text-right">
                         <a href="/gio-hang" class="btn btn-default">Giỏ hàng</a>

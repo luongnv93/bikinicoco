@@ -50,10 +50,6 @@
                                         <label for="telephone">Số điện thoại <span class="require">*</span></label>
                                         <input type="text" id="telephone" class="form-control" onchange="updateUrl()">
                                     </div>
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for="fax">Fax</label>--}}
-                                        {{--<input type="text" id="fax" class="form-control" onchange="updateUrl()">--}}
-                                    {{--</div>--}}
 
                                 </div>
                                 <div class="col-md-6 col-sm-6">
@@ -70,45 +66,7 @@
                                         <label for="city">Thành phố <span class="require">*</span></label>
                                         <input type="text" id="city" class="form-control" onchange="updateUrl()">
                                     </div>
-                                    {{--<div class="form-group">--}}
-                                        {{--<label for=""><small>Phương thức thanh toán</small><span class="text-danger"><small>*</small></span></label>--}}
-                                        {{--<br/>--}}
-                                        {{--<label data-target="#bank_detail" data-toggle="collapse">--}}
-                                            {{--<input type="radio" id="method_bank" value="Chuyển khoản ngân hàng" name="order_method">Chuyển khoản ngân hàng--}}
-                                        {{--</label>--}}
-                                        {{--<br/>--}}
-                                        {{--<div id="bank_detail" class="collapse">--}}
-                                            {{--<div class="accordion-inner">--}}
-                                                {{--<p class="text-primary"><strong>STK: 0991000007201</strong></p>--}}
-                                                {{--<p class="text-primary"><strong>Chủ TK : Tran Thi Ha</strong></p>--}}
-                                                {{--<p class="text-primary"><strong>NH: Vietcombank - CN Tây Hồ- Hà Nội</strong></p>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                        {{--<label data-target="#bank_detail" data-toggle="collapse">--}}
-                                            {{--<input type="radio" value="Thanh toán tiền mặt khi nhận hàng" ng-model="order_method">Thanh toán tiền mặt khi nhận hàng--}}
-                                        {{--</label>--}}
-                                        {{--<br/>--}}
-                                    {{--</div>--}}
                                 </div>
-                                {{--<hr>--}}
-                                {{--<div class="col-md-12">--}}
-                                    {{--<div class="checkbox">--}}
-                                        {{--<label>--}}
-                                            {{--<input type="checkbox"> I wish to subscribe to the OXY newsletter.--}}
-                                        {{--</label>--}}
-                                    {{--</div>--}}
-                                    {{--<div class="checkbox">--}}
-                                        {{--<label>--}}
-                                            {{--<input type="checkbox" checked="checked"> My delivery and billing addresses are the same.--}}
-                                        {{--</label>--}}
-                                    {{--</div>--}}
-                                    {{--<button class="btn btn-primary  pull-right" type="submit" data-toggle="collapse" data-parent="#checkout-page" data-target="#shipping-address-content" id="button-payment-address">Continue</button>--}}
-                                    {{--<div class="checkbox pull-right">--}}
-                                        {{--<label>--}}
-                                            {{--<input type="checkbox"> I have read and agree to the <a title="Privacy Policy" href="javascript:;">Privacy Policy</a> &nbsp;&nbsp;&nbsp;--}}
-                                        {{--</label>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
                             </div>
                         </div>
                     </div>
@@ -154,22 +112,6 @@
                                     </div>
                                     <div class="checkout-total-block">
                                         <ul>
-                                            {{--<li>--}}
-                                                {{--<em>Sub total</em>--}}
-                                                {{--<strong class="price"><span>$</span>47.00</strong>--}}
-                                            {{--</li>--}}
-                                            {{--<li>--}}
-                                                {{--<em>Shipping cost</em>--}}
-                                                {{--<strong class="price"><span>$</span>3.00</strong>--}}
-                                            {{--</li>--}}
-                                            {{--<li>--}}
-                                                {{--<em>Eco Tax (-2.00)</em>--}}
-                                                {{--<strong class="price"><span>$</span>3.00</strong>--}}
-                                            {{--</li>--}}
-                                            {{--<li>--}}
-                                                {{--<em>VAT (17.5%)</em>--}}
-                                                {{--<strong class="price"><span>$</span>3.00</strong>--}}
-                                            {{--</li>--}}
                                             <li class="checkout-total-price">
                                                 <em>Tổng giá đơn hàng</em>
                                                 <strong class="price">{{number_format($cart_total, 0, '.', ',')}} <span>VND</span></strong>
@@ -183,13 +125,6 @@
                                     <img src="https://www.nganluong.vn//css/newhome/img/button/pay-lg.png"border="0" />
                                     </a>
 
-
-                                    {{--<a target="_blank" href="https://www.nganluong.vn/button_payment.php?receiver--}}
-                                            {{--=thangnguyenmanh1992@gmail.com&product_name=ORD_{{carts.new_order.id}}&price={{carts.cart_total}}--}}
-                                            {{--&return_url={{url}}&comments=(Ghi chú về đơn hàng)"  >--}}
-                                        {{--<img src="https://www.nganluong.vn/data/images/buttons/11.gif"  border="0" />--}}
-                                    {{--</a>--}}
-                                    {{--<button class="btn btn-primary pull-right" type="submit" id="button-confirm">Thanh toán</button>--}}
                                     <button type="button" class="btn btn-default pull-right margin-right-20">Hủy bỏ</button>
                                 </div>
                             </div>

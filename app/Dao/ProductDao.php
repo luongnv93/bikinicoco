@@ -58,8 +58,8 @@ class ProductDao {
             $product->selling_price = Input::get('selling_price');
             $product->description = Input::get('description');
             $product->content = Input::get('content');
-            $product->meta_title = Input::get('meta_title');
-            $product->meta_description = Input::get('meta_description');
+            $product->meta_title = "bikini coco";
+            $product->meta_description = "bikini coco";
             $product->category_id = Input::get('category_id');
             $product->feature_image = $filename;
             $product->created_by = Auth::user()->id;
@@ -143,9 +143,9 @@ class ProductDao {
         $product->selling_price = Input::get('selling_price');
         $product->description = Input::get('description');
         $product->content = Input::get('content');
-        $product->meta_title = Input::get('meta_title');
+        $product->meta_title = "bikini coco";
         $product->in_stock = Input::get('in_stock');
-        $product->meta_description = Input::get('meta_description');
+        $product->meta_description = "bikini coco";
         $product->category_id = Input::get('category_id');
         $product->created_by = Auth::user()->id;
         $product->updated_by = Auth::user()->id;
@@ -292,8 +292,8 @@ class ProductDao {
         $category->module_id = 1; // ShopManager
         $category->description = Input::get('description');
         $category->img = $filename;
-        $category->meta_title = Input::get('meta_title');
-        $category->meta_description = Input::get('meta_description');
+        $category->meta_title = "bikini coco";
+        $category->meta_description = "bikini coco";
         $category->created_by = Auth::user()->id;
         $category->updated_by = Auth::user()->id;
         $category->save();
@@ -311,8 +311,8 @@ class ProductDao {
             $category->description = Input::get('description');
             $category->father_id = Input::get('father_id');
             $category->img = $filename;
-            $category->meta_title = Input::get('meta_title');
-            $category->meta_description = Input::get('meta_description');
+            $category->meta_title = 'bikini coco';
+            $category->meta_description = 'bikini coco';
             $category->created_by = Auth::user()->id;
             $category->updated_by = Auth::user()->id;
             $category->save();
@@ -328,8 +328,8 @@ class ProductDao {
             $category->module_id = 1; // ShopManager
             $category->description = Input::get('description');
             $category->father_id = Input::get('father_id');
-            $category->meta_title = Input::get('meta_title');
-            $category->meta_description = Input::get('meta_description');
+            $category->meta_title = 'bikini coco';
+            $category->meta_description = 'bikini coco';
             $category->created_by = Auth::user()->id;
             $category->updated_by = Auth::user()->id;
             $category->save();
@@ -347,8 +347,8 @@ class ProductDao {
                 $category->description = Input::get('description');
                 $category->father_id = Input::get('father_id');
                 $category->img = $filename;
-                $category->meta_title = Input::get('meta_title');
-                $category->meta_description = Input::get('meta_description');
+                $category->meta_title = 'bikini coco';
+                $category->meta_description = 'bikini coco';
                 $category->created_by = Auth::user()->id;
                 $category->updated_by = Auth::user()->id;
                 $category->save();

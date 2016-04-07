@@ -8,23 +8,32 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css">
-    <link href="{{url('admin/assets/global/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{url('admin/assets/global/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{url('admin/assets/global/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{url('admin/assets/global/plugins/uniform/css/uniform.default.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{url('admin/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
+          type="text/css">
+    <link href="{{url('admin/assets/global/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet"
+          type="text/css">
+    <link href="{{url('admin/assets/global/plugins/simple-line-icons/simple-line-icons.min.css')}}" rel="stylesheet"
+          type="text/css">
+    <link href="{{url('admin/assets/global/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"
+          type="text/css">
+    <link href="{{url('admin/assets/global/plugins/uniform/css/uniform.default.css')}}" rel="stylesheet"
+          type="text/css">
+    <link href="{{url('admin/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')}}" rel="stylesheet"
+          type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- END PAGE LEVEL PLUGIN STYLES -->
     <!-- BEGIN PAGE STYLES -->
     <link href="{{url('admin/assets/admin/pages/css/tasks.css')}}" rel="stylesheet" type="text/css"/>
 
     <!-- BEGIN THEME STYLES -->
-    <link href="{{url('admin/assets/global/css/components.css')}}" id="style_components" rel="stylesheet" type="text/css"/>
-    <link href="{{url('admin/assets/global/css/components-rounded.css')}}" id="style_components" rel="stylesheet" type="text/css"/>
+    <link href="{{url('admin/assets/global/css/components.css')}}" id="style_components" rel="stylesheet"
+          type="text/css"/>
+    <link href="{{url('admin/assets/global/css/components-rounded.css')}}" id="style_components" rel="stylesheet"
+          type="text/css"/>
     <link href="{{url('admin/assets/global/css/plugins.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{url('admin/assets/admin/layout2/css/layout.css')}}" rel="stylesheet" type="text/css"/>
-    <link id="style_color" href="{{url('admin/assets/admin/layout2/css/themes/dark.css')}}" rel="stylesheet" type="text/css"/>
+    <link id="style_color" href="{{url('admin/assets/admin/layout2/css/themes/dark.css')}}" rel="stylesheet"
+          type="text/css"/>
     <link href="{{url('admin/assets/admin/layout2/css/custom.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{url('admin/angular-js/css/xeditable.css')}}"/>
     <link rel="stylesheet" href="{{url('admin/angular-js/css/colorpicker.min.css')}}"/>
@@ -65,7 +74,8 @@
         </div>
         <!-- END LOGO -->
         <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+           data-target=".navbar-collapse">
         </a>
         <!-- END RESPONSIVE MENU TOGGLER -->
         <!-- BEGIN PAGE ACTIONS -->
@@ -82,7 +92,8 @@
         <div class="page-actions">
             <div class="btn-group hide">
                 <button type="button" class="btn btn-circle red-pink dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon-bar-chart"></i>&nbsp;<span class="hidden-sm hidden-xs">New&nbsp;</span>&nbsp;<i class="fa fa-angle-down"></i>
+                    <i class="icon-bar-chart"></i>&nbsp;<span class="hidden-sm hidden-xs">New&nbsp;</span>&nbsp;<i
+                            class="fa fa-angle-down"></i>
                 </button>
                 <ul class="dropdown-menu" role="menu">
                     <li>
@@ -114,13 +125,10 @@
             </div>
             <div class="btn-group">
                 <button type="button" class="btn btn-circle green-haze dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-plus"></i>&nbsp;<span class="hidden-sm hidden-xs">Create&nbsp;</span>&nbsp;<i class="fa fa-angle-down"></i>
+                    <i class="fa fa-plus"></i>&nbsp;<span class="hidden-sm hidden-xs">Create&nbsp;</span>&nbsp;<i
+                            class="fa fa-angle-down"></i>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li>
-                        <a href="{{url('admin/post')}}">
-                            <i class="icon-docs"></i> New Post </a>
-                    </li>
                     <li>
                         <a href="{{url('admin/ecommerce/product')}}">
                             <i class="fa fa-briefcase"></i> New Product </a>
@@ -146,7 +154,8 @@
                     @if (Auth::check())
 
                         <li class="dropdown dropdown-user">
-                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                               data-close-others="true">
 
                         <span class="username username-hide-on-mobile">
                         {{ Auth::user()->name }}</span>
@@ -179,47 +188,16 @@
 <div class="page-container">
     <!-- BEGIN SIDEBAR -->
     <div class="page-sidebar-wrapper">
-        <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-        <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
         <div class="page-sidebar navbar-collapse collapse">
             <!-- BEGIN SIDEBAR MENU -->
-            <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-            <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-            <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-            <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-            <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-            <ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+            <ul class="page-sidebar-menu page-sidebar-menu-hover-submenu " data-keep-expanded="false"
+                data-auto-scroll="true" data-slide-speed="200">
                 <li class="start ">
                     <a href="{{url('/admin/dashboard')}}">
                         <i class="icon-home"></i>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
-                {{--<li>--}}
-                {{--<a href="javascript:;">--}}
-                {{--<i class="fa fa-newspaper-o"></i>--}}
-                {{--<span class="title">Blog</span>--}}
-                {{--<span class="arrow "></span>--}}
-                {{--</a>--}}
-                {{--<ul class="sub-menu">--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/post/all-post')}}">--}}
-                {{--<i class="fa fa-bars"></i>--}}
-                {{--All Post</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/post')}}">--}}
-                {{--<i class="fa fa-plus"></i>--}}
-                {{--Add new</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/post/trash')}}">--}}
-                {{--<i class="fa fa-trash"></i>--}}
-                {{--Trash</a>--}}
-                {{--</li>--}}
-                {{--</ul>--}}
-                {{--</li>--}}
 
                 <li class="start ">
                     <a href="{{url('admin/ecommerce/categories')}}">
@@ -261,71 +239,6 @@
                 </li>
 
 
-                {{--<li>--}}
-                {{--<a href="javascript:;">--}}
-                {{--<i class="icon-basket"></i>--}}
-                {{--<span class="title">eCommerce</span>--}}
-                {{--<span class="arrow "></span>--}}
-                {{--</a>--}}
-                {{--<ul class="sub-menu">--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/ecommerce/orders')}}">--}}
-                {{--<i class="icon-basket"></i>--}}
-                {{--Orders</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/ecommerce/product')}}">--}}
-                {{--<i class="fa fa-plus"></i>--}}
-                {{--Add Products</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/ecommerce/all-product')}}">--}}
-                {{--<i class="icon-handbag"></i>--}}
-                {{--All Products</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/ecommerce/categories')}}">--}}
-                {{--<i class="fa fa-bars"></i>--}}
-                {{--Categories</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/ecommerce/categories-custom')}}">--}}
-                {{--<i class="fa fa-bars"></i>--}}
-                {{--Categories Custom</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/ecommerce/groups')}}">--}}
-                {{--<i class="fa fa-list-alt"></i>--}}
-                {{--Group Product</a>--}}
-                {{--</li>--}}
-                {{--<li>--}}
-                {{--<a href="{{url('admin/ecommerce/attributes')}}">--}}
-                {{--<i class="fa fa-ship"></i>--}}
-                {{--Attributes</a>--}}
-                {{--</li>--}}
-                {{--</ul>--}}
-                {{--</li>--}}
-
-                {{--<li>--}}
-                    {{--<a href="javascript:;">--}}
-                        {{--<i class="fa fa-comment"></i>--}}
-                        {{--<span class="title">Comment</span>--}}
-                        {{--<span class="arrow "></span>--}}
-                    {{--</a>--}}
-                    {{--<ul class="sub-menu">--}}
-                        {{--<li>--}}
-                            {{--<a href="{{url('admin/manage/comments')}}">--}}
-                                {{--<i class="fa fa-comment"></i>--}}
-                                {{--All Comment</a>--}}
-                        {{--</li>--}}
-                        {{--<li>--}}
-                            {{--<a href="{{url('admin/manage/rates')}}">--}}
-                                {{--<i class="fa fa-star"></i>--}}
-                                {{--All Product Rate</a>--}}
-                        {{--</li>--}}
-                    {{--</ul>--}}
-                {{--</li>--}}
-
                 @if(Session::has('isAdmin'))
                     <li>
                         <a href="javascript:;">
@@ -350,26 +263,6 @@
 
                 <li>
                     <a href="javascript:;">
-                        <i class="fa fa-phone"></i>
-                        <span class="title">About</span>
-                        <span class="arrow "></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="{{url('admin/contacts/contact')}}">
-                                <i class="fa fa-phone"></i>
-                                Contact</a>
-                        </li>
-                        <li>
-                            <a href="{{url('admin/contacts/advisory')}}">
-                                <i class="fa fa-phone-square"></i>
-                                Advisory</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="javascript:;">
                         <i class="fa fa-gear"></i>
                         <span class="title">Settings</span>
                         <span class="arrow "></span>
@@ -380,11 +273,6 @@
                                 <i class="fa fa-desktop"></i>
                                 Theme Options</a>
                         </li>
-                        {{--<li>--}}
-                            {{--<a href="{{url('admin/setting/editor')}}">--}}
-                                {{--<i class="fa fa-desktop"></i>--}}
-                                {{--Editor </a>--}}
-                        {{--</li>--}}
                     </ul>
                 </li>
 
@@ -396,7 +284,8 @@
     <div class="page-content-wrapper">
         <div class="page-content">
             <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -466,12 +355,15 @@
 <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 <script src="{{url('admin/assets/global/plugins/jquery-ui/jquery-ui.min.js')}}" type="text/javascript"></script>
 <script src="{{url('admin/assets/global/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<script src="{{url('admin/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}" type="text/javascript"></script>
-<script src="{{url('admin/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}" type="text/javascript"></script>
+<script src="{{url('admin/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js')}}"
+        type="text/javascript"></script>
+<script src="{{url('admin/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')}}"
+        type="text/javascript"></script>
 <script src="{{url('admin/assets/global/plugins/jquery.blockui.min.js')}}" type="text/javascript"></script>
 <script src="{{url('admin/assets/global/plugins/jquery.cokie.min.js')}}" type="text/javascript"></script>
 <script src="{{url('admin/assets/global/plugins/uniform/jquery.uniform.min.js')}}" type="text/javascript"></script>
-<script src="{{url('admin/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}" type="text/javascript"></script>
+<script src="{{url('admin/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"
+        type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <script src="{{url('ckeditor/ckeditor.js')}}"></script>
 <!-- END PAGE LEVEL PLUGINS -->

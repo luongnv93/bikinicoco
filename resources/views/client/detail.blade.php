@@ -60,12 +60,6 @@
                                         <img alt="Berry Lace Dress" src="/uploads/images/ecommerce/{{$pg->feature_image}}">
                                     </a>
                                 @endforeach
-                                {{--<a href="../../assets/frontend/pages/img/products/model4.jpg"--}}
-                                {{--class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress"--}}
-                                {{--src="../../assets/frontend/pages/img/products/model4.jpg"></a>--}}
-                                {{--<a href="../../assets/frontend/pages/img/products/model5.jpg"--}}
-                                {{--class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress"--}}
-                                {{--src="../../assets/frontend/pages/img/products/model5.jpg"></a>--}}
                             </div>
                         </div>
 
@@ -85,25 +79,6 @@
                                {!! $product->description !!}
                             </div>
 
-                            {{--TODO product detail | option--}}
-                            {{--<div class="product-page-options">--}}
-                                {{--<div class="pull-left">--}}
-                                    {{--<label class="control-label">Size:</label>--}}
-                                    {{--<select class="form-control input-sm">--}}
-                                        {{--<option>L</option>--}}
-                                        {{--<option>M</option>--}}
-                                        {{--<option>XL</option>--}}
-                                    {{--</select>--}}
-                                {{--</div>--}}
-                                {{--<div class="pull-left">--}}
-                                    {{--<label class="control-label">Color:</label>--}}
-                                    {{--<select class="form-control input-sm">--}}
-                                        {{--<option>Red</option>--}}
-                                        {{--<option>Blue</option>--}}
-                                        {{--<option>Black</option>--}}
-                                    {{--</select>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
                             <div class="product-page-cart">
                                 <form method="POST" action="/add-to-cart-category">
                                     <input type="hidden" name="product_id" value="{{$product->id}}">
@@ -113,17 +88,6 @@
                                     <button class="btn btn-primary" type="submit"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button>
                                 </form>
                             </div>
-
-                            {{--TODO | review--}}
-                            {{--<div class="review">--}}
-                            {{--<input type="range" value="4" step="0.25" id="backing4">--}}
-
-                            {{--<div class="rateit" data-rateit-backingfld="#backing4" data-rateit-resetable="false"--}}
-                            {{--data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5">--}}
-                            {{--</div>--}}
-                            {{--<a href="javascript:;">7 reviews</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:;">Write--}}
-                            {{--a review</a>--}}
-                            {{--</div>--}}
 
                             <ul class="social-icons">
                                 <li><a class="facebook" data-original-title="facebook" href="javascript:;"></a></li>
@@ -137,109 +101,12 @@
 
                         <div class="product-page-content">
                             <ul id="myTab" class="nav nav-tabs">
-                                <li><a href="#Description" data-toggle="tab">Description</a></li>
-                                {{--<li><a href="#Information" data-toggle="tab">Information</a></li>--}}
-                                {{--<li class="active"><a href="#Reviews" data-toggle="tab">Reviews (2)</a></li>--}}
+                                <li><a href="#Description" data-toggle="tab">Feedback</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content">
                                 <div class="tab-pane fade" id="Description">
                                     <p>{!! $product->content !!}</p>
                                 </div>
-                                {{--<div class="tab-pane fade" id="Information">--}}
-                                    {{--<table class="datasheet">--}}
-                                        {{--<tr>--}}
-                                            {{--<th colspan="2">Additional features</th>--}}
-                                        {{--</tr>--}}
-                                        {{--<tr>--}}
-                                            {{--<td class="datasheet-features-type">Value 1</td>--}}
-                                            {{--<td>21 cm</td>--}}
-                                        {{--</tr>--}}
-                                        {{--<tr>--}}
-                                            {{--<td class="datasheet-features-type">Value 2</td>--}}
-                                            {{--<td>700 gr.</td>--}}
-                                        {{--</tr>--}}
-                                        {{--<tr>--}}
-                                            {{--<td class="datasheet-features-type">Value 3</td>--}}
-                                            {{--<td>10 person</td>--}}
-                                        {{--</tr>--}}
-                                        {{--<tr>--}}
-                                            {{--<td class="datasheet-features-type">Value 4</td>--}}
-                                            {{--<td>14 cm</td>--}}
-                                        {{--</tr>--}}
-                                        {{--<tr>--}}
-                                            {{--<td class="datasheet-features-type">Value 5</td>--}}
-                                            {{--<td>plastic</td>--}}
-                                        {{--</tr>--}}
-                                    {{--</table>--}}
-                                {{--</div>--}}
-                                {{--<div class="tab-pane fade in active" id="Reviews">--}}
-                                {{--<!--<p>There are no reviews for this product.</p>-->--}}
-                                {{--<div class="review-item clearfix">--}}
-                                {{--<div class="review-item-submitted">--}}
-                                {{--<strong>Bob</strong>--}}
-                                {{--<em>30/12/2013 - 07:37</em>--}}
-
-                                {{--<div class="rateit" data-rateit-value="5" data-rateit-ispreset="true"--}}
-                                {{--data-rateit-readonly="true"></div>--}}
-                                {{--</div>--}}
-                                {{--<div class="review-item-content">--}}
-                                {{--<p>Sed velit quam, auctor id semper a, hendrerit eget justo. Cum sociis--}}
-                                {{--natoque penatibus et magnis dis parturient montes, nascetur--}}
-                                {{--ridiculus mus. Duis vel arcu pulvinar dolor tempus feugiat id in--}}
-                                {{--orci. Phasellus sed erat leo. Donec luctus, justo eget ultricies--}}
-                                {{--tristique, enim mauris bibendum orci, a sodales lectus purus ut--}}
-                                {{--lorem.</p>--}}
-                                {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<div class="review-item clearfix">--}}
-                                {{--<div class="review-item-submitted">--}}
-                                {{--<strong>Mary</strong>--}}
-                                {{--<em>13/12/2013 - 17:49</em>--}}
-
-                                {{--<div class="rateit" data-rateit-value="2.5" data-rateit-ispreset="true"--}}
-                                {{--data-rateit-readonly="true"></div>--}}
-                                {{--</div>--}}
-                                {{--<div class="review-item-content">--}}
-                                {{--<p>Sed velit quam, auctor id semper a, hendrerit eget justo. Cum sociis--}}
-                                {{--natoque penatibus et magnis dis parturient montes, nascetur--}}
-                                {{--ridiculus mus. Duis vel arcu pulvinar dolor tempus feugiat id in--}}
-                                {{--orci. Phasellus sed erat leo. Donec luctus, justo eget ultricies--}}
-                                {{--tristique, enim mauris bibendum orci, a sodales lectus purus ut--}}
-                                {{--lorem.</p>--}}
-                                {{--</div>--}}
-                                {{--</div>--}}
-
-                                {{--<!-- BEGIN FORM-->--}}
-                                {{--<form action="#" class="reviews-form" role="form">--}}
-                                {{--<h2>Write a review</h2>--}}
-
-                                {{--<div class="form-group">--}}
-                                {{--<label for="name">Name <span class="require">*</span></label>--}}
-                                {{--<input type="text" class="form-control" id="name">--}}
-                                {{--</div>--}}
-                                {{--<div class="form-group">--}}
-                                {{--<label for="email">Email</label>--}}
-                                {{--<input type="text" class="form-control" id="email">--}}
-                                {{--</div>--}}
-                                {{--<div class="form-group">--}}
-                                {{--<label for="review">Review <span class="require">*</span></label>--}}
-                                {{--<textarea class="form-control" rows="8" id="review"></textarea>--}}
-                                {{--</div>--}}
-                                {{--<div class="form-group">--}}
-                                {{--<label for="email">Rating</label>--}}
-                                {{--<input type="range" value="4" step="0.25" id="backing5">--}}
-
-                                {{--<div class="rateit" data-rateit-backingfld="#backing5"--}}
-                                {{--data-rateit-resetable="false" data-rateit-ispreset="true"--}}
-                                {{--data-rateit-min="0" data-rateit-max="5">--}}
-                                {{--</div>--}}
-                                {{--</div>--}}
-                                {{--<div class="padding-top-20">--}}
-                                {{--<button type="submit" class="btn btn-primary">Send</button>--}}
-                                {{--</div>--}}
-                                {{--</form>--}}
-                                {{--<!-- END FORM-->--}}
-                                {{--</div>--}}
                             </div>
                         </div>
 

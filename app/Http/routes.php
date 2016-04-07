@@ -18,22 +18,6 @@ Route::get('gio-hang','FrontendController@showCart');
 Route::get('thanh-toan','FrontendController@checkout');
 
 
-
-
-Route::post('/cart', 'FrontendController@cart');
-
-Route::get('tin-tuc','FrontendController@getBlog');
-Route::get('blog-nha-dep','FrontendController@getBlogBeautifulHouse');
-Route::get('blog-nha-dep/{slug}','FrontendController@getBlogBeautifulHouseSingle');
-Route::get('thiet-ke','FrontendController@getTheDesign');
-Route::get('tin-tuc/{slug}','FrontendController@getSinglePost');
-Route::get('product',function(){
-    return view('theme.product');
-});
-
-
-
-
 //***************************************************************************************************
 //                                              BACKEND
 //***************************************************************************************************
